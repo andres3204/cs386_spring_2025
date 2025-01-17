@@ -22,7 +22,7 @@ def show_about():
     about_window.geometry("250x500")
     about_window.resizable(False, False) # horizontal and vertical
 
-    # Load and display the image using Pillow with absolute path
+    # Load and display the image using Pillow with an absolute path
     try:
         image = Image.open("me.png")
         photo = ImageTk.PhotoImage(image)
@@ -30,7 +30,7 @@ def show_about():
         img_label.image = photo  # Keep a reference
         img_label.grid(row=0, column=1, padx=(22, 10), pady=5)
     except Exception as e:
-        messagebox.showerror("File Exception with me.jng")
+        messagebox.showerror("File Exception with me.jpg")
 
     # Display the creation date
     title_label = Label(about_window, text="My App")
