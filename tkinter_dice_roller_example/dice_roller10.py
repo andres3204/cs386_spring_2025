@@ -72,7 +72,8 @@ tk.Label(totals_frame, text="Blue").grid(row=0, column=8, columnspan=2, padx=10,
 
 # Add totals below the dice
 everyone_var = tk.IntVar(value=0)
-tk.Entry(totals_frame, textvariable=everyone_var, font=("Helvetica", 18), width=5, justify="center", state="readonly", readonlybackground="white").grid(row=1, column=0, columnspan=2, padx=10, pady=5)
+temp = tk.Entry(totals_frame, textvariable=everyone_var, font=("Helvetica", 18), width=5, justify="center", state="readonly", readonlybackground="white")
+temp.grid(row=1, column=0, columnspan=2, padx=10, pady=5)
 
 red_var1 = tk.IntVar(value=0)
 red_var2 = tk.IntVar(value=0)
