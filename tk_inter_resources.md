@@ -10,7 +10,7 @@
 5. [TkDocs First Example](https://tkdocs.com/tutorial/firstexample.html)
 6. [PythonTutorial.net - Tkinter](https://www.pythontutorial.net/tkinter/)
 
-### **Educational & Learning Resources**
+### **Print Books**
 7. [Manning - Python and Tkinter Programming (Book)](https://www.manning.com/books/python-and-tkinter-programming)
 
 ### **Online Tutorials & Guides**
