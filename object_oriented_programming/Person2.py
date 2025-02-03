@@ -36,6 +36,8 @@ class Person:
     def age(self, new_age):
         if new_age >= 0 and new_age <= 120:
             self._age = new_age
+        #else:
+        #    print("invalid age")
 
 
    # string
@@ -49,6 +51,22 @@ class Person:
 # run this code unless it is being used by another file
 if __name__ == "__main__":
     
+    
+    alice = Person("Alice", 18)
+    ben = Person("Ben", 24)
+    
+    print( ben._name ) #avoid direct access
+    print( ben.name )
+    
+    ben._name = "Benjamin" #avoid direct access
+    ben.name = "Benjamin" 
+    
+    print( ben )
+    
+    ben.age = 300
+    print( ben )
+    
+    """
     jennifer = Person("Jennifer", 21)
     print( jennifer )
     print( jennifer.name ) 
@@ -63,7 +81,7 @@ if __name__ == "__main__":
     
     jennifer.age = 45
     print( jennifer )
-    
+    """
     
     
     
