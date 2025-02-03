@@ -1,5 +1,12 @@
 
 
+# US_CAD_Currency.py
+# prof. lehman
+# spring 2025
+#
+# currency class demonstrates instance (ie. self) and shared variables
+#
+
 class US_CAD_Currency:
     
     # shared variable between classes
@@ -47,22 +54,25 @@ class US_CAD_Currency:
     def highest(self):
         return US_CAD_Currency.highest_rate
     
-        
-friday = US_CAD_Currency(100.00, 1.45)
-print( friday )
-print()
 
-saturday = US_CAD_Currency(100.00, 4.45)
-print( saturday )
-print()
+# run this code unless it is being used by another file
+if __name__ == "__main__": 
+    
+    friday = US_CAD_Currency(100.00, 1.45)
+    print( friday )
+    print()
 
-friday.rate = 1.32
-print( friday )
-print()
+    saturday = US_CAD_Currency(100.00, 4.45)
+    print( saturday )
+    print()
 
-friday.amount = 23.45
-print( friday )
-print()
+    friday.rate = 1.32
+    print( friday )
+    print()
+
+    friday.amount = 23.45
+    print( friday )
+    print()
 
 
 
