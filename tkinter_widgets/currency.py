@@ -48,7 +48,8 @@ def update_usd_to_cad_rate():
             
     except (ValueError, TypeError):
         messagebox.showerror("Invalid Input", "Please enter a valid number.")
-
+usd_to_cad_rate = 1.43588
+cad_to_usd_rate = 1 / usd_to_cad_rate
 def update_cad_to_usd_rate():
     global usd_to_cad_rate, cad_to_usd_rate
     try:
