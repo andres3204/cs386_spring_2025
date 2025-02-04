@@ -123,13 +123,13 @@ class Minesweeper:
 # run this code unless it is being used by another file
 if __name__ == "__main__": 
 
-    game = Minesweeper(8, 8)
+    game = Minesweeper(28, 28)
 
-    print("Tiles Mines:")
+    print("Mines:")
     print(game.to_string_mines())
     print()
 
-    print("Tiles Board:")
+    print("Tiles:")
     print(game.to_string_tiles())
     print()
 
@@ -137,4 +137,11 @@ if __name__ == "__main__":
     print(game.to_string_board())
     print()
     
+    r = int( input("Enter row: ") )
+    c = int( input("Enter col: ") )
 
+    game.mark_tile( r, c, 0)
+    
+    print( game.get_status() )
+    print(game.to_string_board())
+    print()
