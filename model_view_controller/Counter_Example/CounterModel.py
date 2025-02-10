@@ -13,3 +13,8 @@ class CounterModel:
         
     def get_value(self):
         return self.count
+    
+if __name__ == "__main__":  
+    wins = CounterModel()
+    wins.increment
+    print("wins = ", wins.get_value())

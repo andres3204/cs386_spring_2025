@@ -12,8 +12,8 @@ class CounterController:
         
         # controller has an instance of the view
         # pick *one* of the View's
-        self.view = CounterView(self)
-        #self.view = CounterView_ASCII(self)
+        # self.view = CounterView(self)
+        self.view = CounterView_ASCII(self)
     
     def increment(self):
         self.model.increment()

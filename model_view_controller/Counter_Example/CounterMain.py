@@ -1,4 +1,3 @@
-
 from CounterController import CounterController
 
 # CounterMain.py

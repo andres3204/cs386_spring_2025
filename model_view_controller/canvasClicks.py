@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from tkinter import ttk
 # canvasClicks.py
 
 # Alternative Mouse Events:
