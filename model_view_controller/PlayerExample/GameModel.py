@@ -1,3 +1,16 @@
+
+
+# GameModel.py
+# spring 2025
+# prof. lehman
+# demonstrates passing data between forms using data class
+#
+#   form1 <-----------> form2
+#     ^                   ^
+#     |                   |      
+#     ---> GameModel <----
+#
+
 from dataclasses import dataclass
 
 @dataclass
