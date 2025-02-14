@@ -40,4 +40,4 @@ class Form2:
         
     def submit_text(self):
         self.parent.label.config(text=self.text_entry.get())
-        self.window.destroy()
+        #self.window.destroy()
