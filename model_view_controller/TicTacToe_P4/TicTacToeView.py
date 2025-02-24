@@ -49,21 +49,25 @@ class TicTacToeView:
     def handle_selection(self, row, col):
         print( "Handle Selection", row, col )
         # *** to do *** tell controller to handle selection
+        self.controller.handle_selection(row, col)
         
     # update board with value
     def update_board(self, row, col, value):
         print("update board")
         # *** to do *** update button text with value
+        self.buttons[row][col].config(text=value)
     
     # update status with msg
     def update_status(self, msg):
         print("update status")
-        # *** to do *** update status text with msage
+        # *** to do *** update status text with message
+        self.status_label.config(text=msg)
            
     # tell controller to reset game
     def reset_game(self):
         print("reset game")
         # *** to do ***  tell controller to reset game
+        self.controller.reset_game()
         
     # start loop and wait for clicks
     def run(self):

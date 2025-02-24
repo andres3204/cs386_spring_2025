@@ -1,3 +1,7 @@
+# Andres Jimenez
+# Feb 11, 2025
+# P4 Part 2
+
 import tkinter as tk
 
 # TicTacToeView_Canvas.py
@@ -75,21 +79,25 @@ class TicTacToeView_Canvas:
             self.drawX( row, col )
         elif value == "O":
             self.drawO( row, col )
-        else:
-            self.canvas.delete("all")
+
+        # Removed as it deletes the vertical and horizontal lines when reset button is hit.
+        # else:
+        #     self.canvas.delete("all")
+
             
     # drawX
     def drawX( self, r, c ):  
         print( r, c )
-        over = c * CELL_SIZE
-        down = (r * CELL_SIZE) + 10
-        self.canvas.create_line(over, down, over+CELL_SIZE-10, down+CELL_SIZE-10, width=2)
-        
+        over = (c * CELL_SIZE) + 12
+        down = (r * CELL_SIZE) + 12
+        self.canvas.create_line(over, down, over+CELL_SIZE-30, down+CELL_SIZE-30, width=3, fill="blue", tags="X")
+        self.canvas.create_line(over, down+CELL_SIZE-30, over+CELL_SIZE-30, down, width=3, fill="blue", tags="X")    
+
     #drawO
     def drawO( self, r, c):
-        over = c * CELL_SIZE
-        down = (r * CELL_SIZE) + 10
-        self.canvas.create_oval(over, down, over+50, down+50, outline="black", width=2)
+        over = (c * CELL_SIZE) + 13
+        down = (r * CELL_SIZE) + 13
+        self.canvas.create_oval(over, down, over+CELL_SIZE-30, down+CELL_SIZE-30, outline="red", width=3, tags="O")
     
     # update status with msg
     def update_status(self, msg):
@@ -98,7 +106,11 @@ class TicTacToeView_Canvas:
     # tell controller to reset game
     def reset_game(self):
         self.controller.reset_game()
-        
+
+        # Delete Xs & Os
+        self.canvas.delete("X")
+        self.canvas.delete("O") 
+
     # start loop and wait for clicks
     def run(self):
         print("view run")
@@ -107,5 +119,3 @@ class TicTacToeView_Canvas:
         
 if __name__ == "__main__":
     test = TicTacToeView_Canvas( None )
- 
-    
